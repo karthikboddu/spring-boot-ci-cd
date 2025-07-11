@@ -12,10 +12,10 @@ import java.util.List;
 public class BlogController {
 
     @GetMapping("/blogs")
-    public ResponseEntity<List<Long>> getAllTutorials(@RequestParam(required = false) String title) {
+    public ResponseEntity<List<String>> getAllTutorials(@RequestParam(required = false) String title) {
         try {
-            List<Long> tutorials = new ArrayList<>();
-
+            List<String> tutorials = new ArrayList<>();
+            tutorials.add("java");
             return new ResponseEntity<>(tutorials, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
