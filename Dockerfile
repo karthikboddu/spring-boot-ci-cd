@@ -1,5 +1,5 @@
 FROM openjdk:21-jdk-slim
-RUN yum install curl
+RUN apt-get update && apt-get install -y curl
 VOLUME /tmp
 EXPOSE 8080
 ADD target/springboot-aws.jar springboot-aws.jar
