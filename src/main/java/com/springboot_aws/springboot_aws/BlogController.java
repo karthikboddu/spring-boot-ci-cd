@@ -16,6 +16,7 @@ public class BlogController {
         try {
             List<String> tutorials = new ArrayList<>();
             tutorials.add("java");
+            tutorials.add("php");
             return new ResponseEntity<>(tutorials, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
